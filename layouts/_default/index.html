@@ -1,0 +1,13 @@
+{{ define "title" }}
+{{- .Site.Title -}}
+{{ end }}
+{{ define "main" }}
+{{ "<!-- _default/index.html start -->" | safeHTML }}
+{{ .Content }}
+<ul>
+{{ range .Site.RegularPages -}}
+<li>{{ .Date.Format "2006-01-02" }} <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+{{ end -}}
+</ul>
+{{ "<!-- _default/index.html end -->" | safeHTML }}
+{{ end }}

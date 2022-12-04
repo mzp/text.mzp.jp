@@ -1,0 +1,9 @@
+baseURL = 'https://text.mzp.jp/'
+languageCode = 'ja'
+title = 'text.mzp.jp'
+disableKinds = ['taxonomy', 'term', 'section']
+enableRobotsTXT = true
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 3

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang={{ .Site.LanguageCode }}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="blog about foods, career, and software design">
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    <title>{{ block "title" . }}{{ end }}</title>
+  </head>
+  <body>
+    {{ "<!-- _default/baseof.html start -->" | safeHTML }}
+    <h1><a href="{{ relURL "/" }}">{{ .Site.Title }}</a></h1>
+    {{ block "main" . }}{{ end }}
+    {{ "<!-- _default/baseof.html end -->" | safeHTML }}
+  </body>
+</html>
