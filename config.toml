@@ -5,5 +5,4 @@ disableKinds = ['taxonomy', 'term', 'section']
 enableRobotsTXT = true
 
 [markup]
-  [markup.tableOfContents]
-    startLevel = 3
+  defaultMarkdownHandler = 'goldmark'

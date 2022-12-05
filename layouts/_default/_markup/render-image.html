@@ -1,5 +1,5 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 {{ $small := $image.Resize "480x" }}
 {{ with $small }}
-  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}">
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" class="md__image">
 {{ end }}
