@@ -4,3 +4,4 @@
 /package-lock.json
 *.swp
 .hugo_build.lock
+.DS_Store
