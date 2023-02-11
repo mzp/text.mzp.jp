@@ -20,6 +20,15 @@
   padding-right: 1rem
 }
 
+.text-center {
+  text-align: center
+}
+
+.text-slate-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity))
+}
+
 @media (min-width: 640px) {
   .sm\:px-6 {
     padding-left: 1.5rem;
@@ -37,3 +46,5 @@
     padding-right: 2rem
   }
 }
+
+

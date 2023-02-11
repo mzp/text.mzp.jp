@@ -1,4 +1,7 @@
 {{ $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) }}
 {{ $small := $image.Resize "480x" }}
 
+<figure class="text-center text-slate-600">
 <a href="{{ .Destination | safeURL }}"><img alt="{{ .Text }}" src="{{ $small.RelPermalink }}" class="w-64 md:w-96"></a>
+<figcaption>{{ .Text }}</figcaption>
+</figure>
